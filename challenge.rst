@@ -31,11 +31,11 @@ The embedded *hardware* platform will consist of the following:
 
 .. image:: https://github.com/klauspetersen/audioexplorers2018/blob/master/hw_diagram.png
 
-The embedded *software* platform will consist of the following:
-- Application 
-- Zephyr RTOS
-- Drivers
-- Emulation models
+The embedded software* platform will consist of the following:
+-   Application 
+-   Zephyr RTOS
+-   Drivers
+-   Emulation models
 
 Objectives
 ----------
@@ -46,10 +46,10 @@ Objectives
         *   ERASE
     b.  Include timing information from the datasheet in the model
 
-2.  Write an emulation of the audio-path using QEMU
-    a. Write an emulation of audio input at the I2S peripheral. Feel free to be inspired by similar code found online.
-    b. Write an application running in a zephyr thread that manipulates the audio data in some way.
-    c. Write an emulation of audio output at the I2S peripheral. Feel free to be inspired by similar code found online.
+2.  Write an emulation of the audio-path using QEMU:
+    a.  Write an emulation of audio input at the I2S peripheral. Feel free to be inspired by similar code found online.
+    b.  Write an application running in a zephyr thread that manipulates the audio data in some way.
+    c.  Write an emulation of audio output at the I2S peripheral. Feel free to be inspired by similar code found online.
     
 
 Getting started
