@@ -29,6 +29,8 @@ The embedded *hardware* platform will consist of the following:
 - I2S
     - Audio output
 
+.. image:: https://github.com/klauspetersen/audioexplorers2018/blob/master/hw_diagram.png
+
 The embedded *software* platform will consist of the following:
 * Application 
 * Zephyr RTOS
