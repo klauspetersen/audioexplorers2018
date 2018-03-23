@@ -32,10 +32,10 @@ The embedded *hardware* platform will consist of the following:
 .. image:: https://github.com/klauspetersen/audioexplorers2018/blob/master/hw_diagram.png
 
 The embedded *software* platform will consist of the following:
-* Application 
-* Zephyr RTOS
-* Drivers
-* Emulation models
+- Application 
+- Zephyr RTOS
+- Drivers
+- Emulation models
 
 Objectives
 ----------
