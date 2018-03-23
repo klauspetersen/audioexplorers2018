@@ -1,6 +1,6 @@
-=============================
-Simulate an embedded platform
-=============================
+===================================
+Simulate an embedded audio platform
+===================================
 
 This document
 ------------
@@ -15,7 +15,7 @@ To get all the performance out of your system, you must have full control of how
 
 The challenge
 -------------
-Simulate an embedded platform consisting of a RISC-V processor and peripherals. The processor will be running a new open source real-time operating system (RTOS) called Zephyr (https://www.zephyrproject.org/), to which Oticon is an active contributor.
+Simulate an embedded platform consisting of a RISC-V processor and peripherals. The processor will be running a next-generation open source real-time operating system (RTOS) called Zephyr (https://www.zephyrproject.org/), to which Oticon is an active contributor.
 The challenge consists of multiple objectives. Feel free to complete any number of them.
 
 The setup
@@ -28,10 +28,11 @@ The embedded *hardware* platform will consist of the following:
     - Audio input
 - I2S
     - Audio output
+- Timer
 
 .. image:: https://github.com/klauspetersen/audioexplorers2018/blob/master/hw_diagram.png
 
-The embedded software* platform will consist of the following:
+The embedded *software* platform will consist of the following:
 -   Application 
 -   Zephyr RTOS
 -   Drivers
@@ -50,9 +51,13 @@ Write an emulation of the audio-path using QEMU:
     - Write an emulation of audio input at the I2S peripheral. Feel free to be inspired by similar code found online.
     - Write an application running in a zephyr thread that manipulates the audio data in some way.
     - Write an emulation of audio output at the I2S peripheral. Feel free to be inspired by similar code found online.
+
+Write an application that performs write/reads from the serial NOR flash while streaming audio through the I2S:
+    - Read and write at random intervals to the serial NOR flash.
+    - Use the Zephyr kernel to guarantee that the real-time requirements are complied with.
     
 
 Getting started
 ---------------
-Follow the getting stated guide:
+Follow the getting started guide:
 https://github.com/klauspetersen/audioexplorers2018/blob/master/gettingstarted.rst
