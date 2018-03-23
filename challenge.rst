@@ -5,7 +5,7 @@ Simulate an embedded platform
 This document
 ------------
 The newest version of this document is found at:
-
+https://github.com/klauspetersen/audioexplorers2018/blob/master/challenge.rst
 
 The scenario
 ------------
@@ -16,8 +16,11 @@ To get all the performance out of your system, you must have full control of how
 The challenge
 -------------
 Simulate an embedded platform consisting of a RISC-V processor and peripherals. The processor will be running a new open source real-time operating system (RTOS) called Zephyr (https://www.zephyrproject.org/), to which Oticon is an active contributor.
+The challenge consists of multiple objectives. Feel free to complete any number of them.
 
-The embedded platform must consist of the following:
+The setup
+---------
+The embedded *hardware* platform will consist of the following:
 - RISC-V
 - SPI
     - Serial NOR flash (MT25Q)
@@ -26,16 +29,28 @@ The embedded platform must consist of the following:
 - I2S
     - Audio output
 
+The embedded *software* platform will consist of the following:
+* Application 
+* Zephyr RTOS
+* Drivers
+* Emulation models
+
 Objectives
 ----------
-1.  Write an emulation of the MT25Q using QEMU
+1.  Write an emulation of the MT25Q using QEMU. Feel free to be inspired by similar code found online.
     a.  Implement the following functions:
         *   READ
         *   WRITE
         *   ERASE
     b.  Include timing information from the datasheet in the model
 
-2. 
+2.  Write an emulation of the audio-path using QEMU
+    a. Write an emulation of audio input at the I2S peripheral. Feel free to be inspired by similar code found online.
+    b. Write an application running in a zephyr thread that manipulates the audio data in some way.
+    c. Write an emulation of audio output at the I2S peripheral. Feel free to be inspired by similar code found online.
+    
 
 Getting started
 ---------------
+Follow the getting stated guide:
+https://github.com/klauspetersen/audioexplorers2018/blob/master/gettingstarted.rst
