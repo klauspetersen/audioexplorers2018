@@ -25,15 +25,20 @@ The challenge consists of multiple objectives. Feel free to complete any number 
 
 The setup
 ---------
-The embedded *hardware* platform will consist of the following:
-- RISC-V
-- SPI
-    - Serial NOR flash (MT25Q)
-- I2S
-    - Audio input
-- I2S
-    - Audio output
-- Timer
+The embedded *hardware* platform will consist of the following
+ - RISC-V
+ - SPI
+
+   - Serial NOR flash (MT25Q)
+
+ - I2S
+
+   - Audio input
+ - I2S
+    
+   - Audio output
+
+ - Timer
 
 .. image:: https://github.com/klauspetersen/audioexplorers2018/blob/master/hw_diagram.png
 
@@ -49,25 +54,31 @@ Objectives
 ----------
 Write an emulation of the MT25Q.
     - Implement the following functions:
-      * READ
-      * WRITE
-      * ERASE
-    - Include timing information from the datasheet in the model. The datasheet can be found on github 
+
+      - READ
+      - WRITE
+      - ERASE
+    - Include timing information from the datasheet in the model. The datasheet can be found on github.
+
       - Use a separete zephyr thread with delays to emulate the timing. 
 
 Write an emulation of the audio-path.
-    - Write an emulation of audio input at the I2S peripheral. 
+    - Write an emulation of audio input at the I2S peripheral.
+ 
       - I2S audio input could be modeled as a simple thread pushing data onto a queue at regular intervals.
     - Write an emulation of audio output at the I2S peripheral. 
+
       - I2S audio output could be modeled as a queue to which data is pushed. The queue is emptied at regular intervals. 
     - Write an application running in a zephyr thread that does the following:
+
       - Reads audio data from the I2S input
       - Manipulates the audio data in some way. Be creative.
       - Write audio data to the I2S output
 
-Write an application that performs write/reads from the serial NOR flash while streaming audio through the I2S:
+Write an application that performs write/reads from the serial NOR flash while streaming audio through the I2S.
     - Read and write at random intervals to the serial NOR flash.
     - Use the Zephyr kernel to guarantee that the real-time requirements of the audio path are complied with.
+
       - Play around with delays in the code and number of writes to flash, sizes of writes etc, to see how far you can push it before it affects the audiostream.
 
 Getting started
