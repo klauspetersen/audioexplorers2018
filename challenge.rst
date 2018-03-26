@@ -43,10 +43,10 @@ The embedded *hardware* platform will consist of the following
 .. image:: https://github.com/klauspetersen/audioexplorers2018/blob/master/hw_diagram.png
 
 The finished embedded *software* platform will consist of the following:
-- Application 
-- Zephyr RTOS
-- Drivers
-- Emulation models
+ - Application 
+ - Zephyr RTOS
+ - Drivers
+ - Emulation models
 
 QEMU implements a funcitonal model of the RISC-V processor but it does not emulate cycle-true timing. To include timing behavior we can make use of the Zephyr RTOS functions like threads and delays.
 
