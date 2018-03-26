@@ -23,6 +23,8 @@ Emulation and simulation is key when designing cutting edge embedded systems whe
 
 The challenge consists of multiple objectives. Feel free to complete any number of them.
 
+The objectives are loosely defined to allow for creativity. Feel free to add any additional contraints and requirements and tell us why.
+
 The setup
 ---------
 The embedded *hardware* platform will consist of the following
@@ -77,11 +79,21 @@ Write an emulation of the audio-path.
 
 Write an application that performs write/reads from the serial NOR flash while streaming audio through the I2S.
     - Read and write at random intervals to the serial NOR flash.
-    - Use the Zephyr kernel to guarantee that the real-time requirements of the audio path are complied with.
+    - Use the Zephyr kernel to guarantee that the real-time requirements of the audio path are complied with(Make sure that the I2S output never runs out of samples).
 
       - Play around with delays in the code and number of writes to flash, sizes of writes etc, to see how far you can push it before it affects the audiostream.
+
+Deliverables
+------------
+Documentation
+ - Write about what you chose to implement, what were the challenges and how you solved them
+
+Code
+ - With lots of comments
+ - Instructions how to run it
 
 Getting started
 ---------------
 Follow the getting started guide:
 https://github.com/klauspetersen/audioexplorers2018/blob/master/gettingstarted.rst
+
